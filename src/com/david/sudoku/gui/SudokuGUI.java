@@ -1,9 +1,12 @@
+package com.david.sudoku.gui;
+
+import com.david.sudoku.model.SudokuBoard;
+import com.david.sudoku.model.GameStatus;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -269,7 +272,7 @@ public class SudokuGUI extends JFrame {
         // Por simplicidade, vou fazer com que "Iniciar Novo Jogo" limpe os números do jogador
         // e mantenha os fixos, como um "reset" do jogo atual.
         // Se a intenção é carregar um *novo* tabuleiro, a lógica de inicialização precisaria ser refeita,
-        // possivelmente com uma nova instância de SudokuBoard ou um método reset mais robusto.
+        // possivelmente com uma nova instância de com.david.sudoku.model.SudokuBoard ou um método reset mais robusto.
         sudokuBoard.clearPlayerNumbers();
         sudokuBoard.checkGameStatus(); // Reavalia o status após a limpeza
         drawBoard();
